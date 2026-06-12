@@ -1,6 +1,6 @@
 import pygame
 import time
-import logging
+# import logging
 from datetime import date
 from random import randint
 
@@ -18,8 +18,8 @@ C_GRAY = (128, 128, 128)
 
 pygame.init()
 
-logging.basicConfig(level=logging.INFO, filename=f"base_log_{date.today()}.log",filemode="w",
-                    format="%(asctime)s %(levelname)s %(message)s")
+# logging.basicConfig(level=logging.INFO, filename=f"base_log_{date.today()}.log",filemode="w",
+#                     format="%(asctime)s %(levelname)s %(message)s")
 
 class Area:
     def __init__(self, window, x, y, wid, hid, contour, colArea, colContour = (0, 0, 0), hidContour = 0): # window -- где будет расположен квадрат
@@ -133,4 +133,4 @@ class Button():
         # self.rectArea.collidepoint(x, y) -- это из pygame.mouse.get_pos()
         if (self.rectArea.collidepoint(x, y)) == True:
             self.function() # а аргументы пусть сами дописывают сюда (или я сделаю потом такую фишку)
-            logging.info("вроде работает")
+            # logging.info("вроде работает")
